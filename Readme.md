@@ -29,8 +29,6 @@ Go back to pending requests page and you'll notice the Chrome blocked pop-ups li
 
 Since you trust this extension ;) :
 
-![allowing popup](https://user-images.githubusercontent.com/11685953/110122838-3df0ad80-7de8-11eb-8e51-963fe5550df4.jpg)
-
 Click Allow and done.
 
 ## Congratulations! Your life is now easier.
