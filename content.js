@@ -7,11 +7,17 @@ function getColumnIndices(total) {
 	return indices;
 }
 
+function getRowsFromTableUI() {
+	const allColumns = document.getElementsByClassName('rt-td');
+	const indices = getColumnIndices(allColumns.length);
+	const rows = indices.map((index) => allColumns[index]);
+
+	return rows;
+}
+
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 	if (request.message === 'clicked_browser_action') {
-		const allColumns = document.getElementsByClassName('rt-td');
-		const indices = getColumnIndices(allColumns.length);
-		const rows = indices.map((index) => allColumns[index]);
+		const rows = getRowsFromTableUI();
 
 		const evt = new MouseEvent('click', {
 			view: window,

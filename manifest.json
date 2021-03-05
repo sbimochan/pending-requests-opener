@@ -1,21 +1,25 @@
 {
-  "manifest_version":2,
+  "manifest_version": 2,
   "name": "Pending requests opener",
   "description": "This is only for target audience who works in leapfrog. The purpose of building this tool is to auto open long list of pending requests in new tab and use Ctrl+Click to navigate to each record use close tabs to Right later.",
   "version": "0.1",
   "content_scripts": [
     {
       "matches": [
-        "https://*/*/*"
+        "https://*.lftechnology.com/leave/pending"
       ],
-      "js": ["content.js"]
+      "js": [
+        "content.js"
+      ]
     }
   ],
   "browser_action": {
     "default_icon": "icon.png"
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+    ]
   },
   "icons": {
     "128": "128.png"
